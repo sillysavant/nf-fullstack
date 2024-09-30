@@ -1,0 +1,19 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+
+  datasource:
+    url: ${}
+    username: ${}
+    password: ${}
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+
+jwt:
