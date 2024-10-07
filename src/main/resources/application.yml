@@ -2,12 +2,10 @@ spring:
   output:
     ansi:
       enabled: always
-
   datasource:
-    url: ${}
-    username: ${}
-    password: ${}
-
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
   jpa:
     properties:
       hibernate:
@@ -17,3 +15,19 @@ spring:
       ddl-auto: update
 
 jwt:
+  token:
+    secret-key:
+    expiration:
+  refresh-token:
+    expiration:
+
+redis:
+  host: ${REDIS_HOST}
+  port: ${REDIS_PORT}
+  password: ${REDIS_PASSWORD}
+  connectTimeoutInSecond: 60 #ms
+  ttl-menus: 1440 # 1 day
+
+info:
+  app:
+    version: 1.0.0
