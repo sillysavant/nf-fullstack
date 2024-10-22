@@ -1,0 +1,33 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    url: jdbc:postgresql://localhost:5433/nf-fullstack
+    username: postgres
+    password: postgresql
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  token:
+    secret-key:
+    expiration:
+  refresh-token:
+    expiration:
+
+redis:
+  host: ${REDIS_HOST}
+  port: ${REDIS_PORT}
+  password: ${REDIS_PASSWORD}
+  connectTimeoutInSecond: 60 #ms
+  ttl-menus: 1440 # 1 day
+
+info:
+  app:
+    version: 1.0.0
